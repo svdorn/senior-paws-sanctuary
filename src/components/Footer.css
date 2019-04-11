@@ -3,7 +3,7 @@
     z-index: 1000;
     height: 150px;
     background-color: var(--background-color);
-    color: var(--primary-purple);
+    color: var(--primary-color);
 }
 
 .footer-logo {
@@ -37,7 +37,7 @@
     margin-top: 60px;
 }
 .footer-button > a {
-    background: var(--primary-purple);
+    background: var(--primary-color);
     color: var(--text-white);
 }
 

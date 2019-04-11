@@ -118,7 +118,7 @@ class Header extends Component {
                     );
                 })}
                 <div>
-                    <SocialLinks extras={false} />
+                    <SocialLinks />
                 </div>
             </div>
         );
@@ -155,9 +155,7 @@ class Header extends Component {
         return (
             <div className="menu">
                 <div>
-                    <Link to="/">
-                        <img src="/images/Title.png" className="title" alt="Lily Thongnuam" />
-                    </Link>
+                    <Link to="/">Senior Paws Sanctuary</Link>
                 </div>
                 {this.makeDesktopMenu()}
                 {this.makeMobileMenu()}

@@ -33,10 +33,10 @@ class Footer extends Component {
                 </div>
                 <div className="footer-logo">
                     <Link to="/">
-                        <b>Lily Thongnuam</b>
+                        <b>Senior Paws Sanctuary</b>
                     </Link>
                     <div className="footer-links">
-                        <SocialLinks extras={true} />
+                        <SocialLinks />
                     </div>
                 </div>
                 <div className="footer-text">
@@ -48,7 +48,7 @@ class Footer extends Component {
                 </div>
                 <div className="footer-button">
                     <Button component={GoToContact} size="large">
-                        Contact Lily
+                        Contact Us
                     </Button>
                 </div>
             </div>

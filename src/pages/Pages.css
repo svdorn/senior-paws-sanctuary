@@ -21,27 +21,27 @@
 
 .home-first-frame {
     height: 600px;
-    background-image: url("/images/Opener.jpg");
+    background-image: url("/images/logo.png");
 }
 
 .about-first-frame {
     height: 400px;
-    background-image: url("/images/1-5.jpeg");
+    background-image: url("/images/logo.png");
 }
 
 .dance-first-frame {
     height: 400px;
-    background-image: url("/images/1-7.jpeg");
+    background-image: url("/images/logo.png");
 }
 
 .choreography-first-frame {
     height: 400px;
-    background-image: url("/images/1-8.jpeg");
+    background-image: url("/images/logo.png");
 }
 
 .gallery-first-frame {
     height: 400px;
-    background-image: url("/images/1-4.jpeg");
+    background-image: url("/images/logo.png");
 }
 
 .philosophy-first-frame {
@@ -171,7 +171,7 @@
     margin: 20px auto;
 }
 .form-button {
-    background-color: var(--primary-purple) !important;
+    background-color: var(--primary-color) !important;
     color: var(--text-white) !important;
 }
 
@@ -297,7 +297,7 @@
     text-align: center;
 }
 .philosophy > span > div > a {
-    background: var(--primary-purple);
+    background: var(--primary-color);
     color: var(--text-white);
     padding: 12px 30px;
 }
@@ -370,7 +370,7 @@
     margin-top: 25px;
 }
 .button {
-    background-color: var(--primary-purple) !important;
+    background-color: var(--primary-color) !important;
     color: var(--text-white) !important;
 }
 
@@ -485,21 +485,6 @@
     }
     .bio-container > div {
         font-size: 17px;
-    }
-    .home-first-frame {
-        background-image: url("/images/Opener-mobile.jpg");
-    }
-
-    .about-first-frame {
-        background-image: url("/images/1-5-mobile.jpeg");
-    }
-
-    .dance-first-frame {
-        background-image: url("/images/1-7-mobile.jpeg");
-    }
-
-    .choreography-first-frame {
-        background-image: url("/images/1-8-mobile.jpeg");
     }
 
     .hold-header {

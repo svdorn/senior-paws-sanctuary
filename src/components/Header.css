@@ -15,6 +15,7 @@ a {
 .menu > div:first-child {
     margin: 15px 0 0 20px;
     display: inline-block;
+    height: 50px;
 }
 .desktop-menu {
     float: right;

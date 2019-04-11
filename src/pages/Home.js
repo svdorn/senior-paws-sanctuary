@@ -27,10 +27,6 @@ class Home extends React.Component {
                 <div className="first-frame-container home-first-frame">
                     <Swirl />
                 </div>
-                <div className="home">
-                    <Bio />
-                    <Images activeStep={activeStep} handleStepChange={this.handleStepChange} />
-                </div>
                 <Cards />
             </div>
         );
@@ -64,53 +60,6 @@ const Cards = () => {
         </div>
     );
 };
-
-const Bio = () => {
-    return (
-        <div className="bio-container">
-            <div>
-                Lily is an artist in all of its meaning. She aspires to connect with others through
-                her emotionally driven work. She is currently graduating with a Bachelor of Fine
-                Arts in dance performance and a minor in studio art at Chapman University. From
-                performing live on stage to producing/directing her own short dance films, you can
-                find her involved in a variety of media. After graduation, Lily looks forward to
-                moving to Los Angeles to continue to pursue a commercial dance career.
-            </div>
-            <HomeButton />
-        </div>
-    );
-};
-
-const Images = ({ activeStep, handleStepChange }) => {
-    return (
-        <AutoPlaySwipeableViews
-            axis="x"
-            index={activeStep}
-            onChangeIndex={handleStepChange}
-            enableMouseEvents
-            className="images-container"
-        >
-            {images.map((step, index) => (
-                <div key={step.label}>
-                    <Image activeStep={activeStep} step={step} index={index} />
-                </div>
-            ))}
-        </AutoPlaySwipeableViews>
-    );
-};
-
-const Image = ({ activeStep, step, index }) =>
-    Math.abs(activeStep - index) <= 2 ? (
-        <img className="image" src={step.imgPath} alt={step.label} />
-    ) : null;
-
-const HomeButton = () => (
-    <div className="button-container">
-        <Button component={GoToDance} className="button" size="large">
-            Let{"'"}s Dance
-        </Button>
-    </div>
-);
 
 const GoToDance = props => <Link to="/dance" {...props} />;
 
