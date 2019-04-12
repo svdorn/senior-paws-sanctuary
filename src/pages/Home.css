@@ -1,0 +1,52 @@
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.section-1 {
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-image: url("/images/Park.png");
+    height: 100vh;
+    margin-bottom: -100px;
+    height: 90vh;
+    min-height: 680px;
+    max-height: 800px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.clouds {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    height: 161px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.clouds-bg {
+    position: absolute;
+    right: -1600px;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    background: url("/images/Cloud.svg") 0% 0% repeat;
+    z-index: -1;
+    background-size: contain;
+    -moz-animation: MOVE-BG 60s infinite linear;
+    -webkit-animation: MOVE-BG 60s infinite linear;
+    animation: MOVE-BG 60s infinite linear;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
