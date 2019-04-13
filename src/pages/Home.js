@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 import Card from "../components/Card";
+import Swirl from "../components/Swirl";
 
 import "./Pages.css";
 
@@ -24,32 +25,15 @@ class Home extends React.Component {
         return (
             <div className="container">
                 <div className="first-frame-container home-first-frame">
-                    <div style={{ textAlign: "center", fontSize: "40px" }}>
-                        <img height={400} src="/images/logo.png" />
-                        <div style={{ fontSize: "20px", width: "500px", margin: "auto" }}>
-                            Senior Paws Sanctuary is a nonprofit organization dedicated to giving
-                            senior dogs a comfortable home to live out their days in peace.
-                        </div>
-                        <div
-                            style={{
-                                marginTop: "50px"
-                            }}
-                        >
-                            <Button
-                                style={{
-                                    backgroundColor: "#5cdb59",
-                                    color: "#ffffff",
-                                    fontSize: "24px",
-                                    padding: "12px 36px"
-                                }}
-                            >
-                                DONATE
-                            </Button>
-                        </div>
-                    </div>
+                    <Swirl fill="#f7f7f7" />
                 </div>
-
-                <Cards />
+                <div className="frame-container">
+                    <Swirl fill="#2884f6" />
+                    <Cards />
+                </div>
+                <div className="first-frame-container home-first-frame">
+                    <Swirl fill="#f7f7f7" />
+                </div>
             </div>
         );
     }

@@ -18,9 +18,24 @@
     width: 100%;
 }
 
+.frame-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 180px;
+}
+
+.poop {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMTZweCIgdmlld…04MCAyMS0xNjAgNDItMzIwIDQyLTMyMCAwLTMyMC04NC02NDAtODR6Ii8+PC9nPjwvc3ZnPg==);
+    background-size: 100% 116px;
+    bottom: 0;
+    height: 116px;
+    z-index: 1;
+    transform: rotateX(180deg);
+}
+
 .home-first-frame {
-    height: 700px;
-    background-image: url("/images/Park3.png");
+    height: 800px;
+    background-color: var(--primary-blue);
 }
 
 .about-first-frame {
@@ -48,8 +63,6 @@
 }
 
 .cards {
-    padding-top: 90px;
-    padding-bottom: 50px;
     display: inline-flex;
 }
 

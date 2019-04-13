@@ -155,7 +155,9 @@ class Header extends Component {
         return (
             <div className="menu">
                 <div>
-                    <Link to="/">Senior Paws Sanctuary</Link>
+                    <Link to="/">
+                        <img src="/images/stuff/pawprint.svg" height={40} />
+                    </Link>
                 </div>
                 {this.makeDesktopMenu()}
                 {this.makeMobileMenu()}
