@@ -52,6 +52,7 @@ a {
     list-style-type: none;
 }
 .submenu > li {
+    padding: 5px;
 }
 
 .triangle {
@@ -95,6 +96,11 @@ a {
 }
 .desktop-menu > div:hover > div.selected {
     color: var(--text-black);
+}
+.desktop-menu-item {
+    font-size: 18px;
+    margin-left: 5px;
+    margin-top: -8px;
 }
 .mobile-menu {
     float: right;

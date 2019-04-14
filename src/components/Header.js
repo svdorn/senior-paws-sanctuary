@@ -16,12 +16,14 @@ const routes = [
             {
                 name: "Application",
                 link: "/application",
-                index: 0
+                index: 0,
+                icon: "/images/stuff/pawprint.svg"
             },
             {
                 name: "Adoptable Dogs",
                 link: "/adopt",
-                index: 1
+                index: 1,
+                icon: "/images/stuff/pawprint.svg"
             }
         ],
         triangleMargin: "-70px"
@@ -32,17 +34,20 @@ const routes = [
             {
                 name: "Foster",
                 link: "/foster",
-                index: 2
+                index: 2,
+                icon: "/images/stuff/pawprint.svg"
             },
             {
                 name: "Volunteer",
                 link: "/volunteer",
-                index: 3
+                index: 3,
+                icon: "/images/stuff/pawprint.svg"
             },
             {
                 name: "Corporate Sponsorships",
                 link: "/corporate-sponsorships",
-                index: 4
+                index: 4,
+                icon: "/images/stuff/pawprint.svg"
             }
         ],
         triangleMargin: "-75px"
@@ -53,12 +58,14 @@ const routes = [
             {
                 name: "Mission, etc.",
                 link: "/mission",
-                index: 5
+                index: 5,
+                icon: "/images/stuff/pawprint.svg"
             },
             {
                 name: "Our Story",
                 link: "/our-story",
-                index: 6
+                index: 6,
+                icon: "/images/stuff/pawprint.svg"
             }
         ],
         triangleMargin: "-50px"
@@ -69,12 +76,14 @@ const routes = [
             {
                 name: "Contact",
                 link: "/contact",
-                index: 7
+                index: 7,
+                icon: "/images/stuff/pawprint.svg"
             },
             {
                 name: "Surrender",
                 link: "/surrender",
-                index: 8
+                index: 8,
+                icon: "/images/stuff/pawprint.svg"
             }
         ],
         triangleMargin: "-30px"
@@ -202,6 +211,7 @@ class Header extends Component {
                                                 name={link.name}
                                                 link={link.link}
                                                 index={link.index}
+                                                icon={link.icon}
                                             />
                                         </li>
                                     );
@@ -259,10 +269,13 @@ class Header extends Component {
     }
 }
 
-const DesktopMenuItem = ({ name, link, index }) => {
+const DesktopMenuItem = ({ name, link, index, icon }) => {
     return (
         <Link to={link}>
-            <div>{name}</div>
+            <img height={20} src={icon} />
+            <span className="desktop-menu-item">
+                <b>{name}</b>
+            </span>
         </Link>
     );
 };
