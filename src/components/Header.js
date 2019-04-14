@@ -23,7 +23,8 @@ const routes = [
                 link: "/adopt",
                 index: 1
             }
-        ]
+        ],
+        triangleMargin: "-70px"
     },
     {
         name: "Get Involved",
@@ -43,7 +44,8 @@ const routes = [
                 link: "/corporate-sponsorships",
                 index: 4
             }
-        ]
+        ],
+        triangleMargin: "-75px"
     },
     {
         name: "About Us",
@@ -58,7 +60,8 @@ const routes = [
                 link: "/our-story",
                 index: 6
             }
-        ]
+        ],
+        triangleMargin: "-50px"
     },
     {
         name: "Contact Us",
@@ -73,7 +76,8 @@ const routes = [
                 link: "/surrender",
                 index: 8
             }
-        ]
+        ],
+        triangleMargin: "-30px"
     }
 ];
 
@@ -185,7 +189,23 @@ class Header extends Component {
                                 <b>{route.name}</b>
                             </div>
                             <ul className="submenu">
-                                <li>Hey</li>
+                                <span className="triangle">
+                                    <span
+                                        className="triangle-arrow"
+                                        style={{ marginLeft: route.triangleMargin }}
+                                    />
+                                </span>
+                                {route.links.map(link => {
+                                    return (
+                                        <li key={link.index}>
+                                            <DesktopMenuItem
+                                                name={link.name}
+                                                link={link.link}
+                                                index={link.index}
+                                            />
+                                        </li>
+                                    );
+                                })}
                             </ul>
                         </div>
                     );
@@ -239,8 +259,12 @@ class Header extends Component {
     }
 }
 
-const DesktopMenuItem = ({}) => {
-    return <div />;
+const DesktopMenuItem = ({ name, link, index }) => {
+    return (
+        <Link to={link}>
+            <div>{name}</div>
+        </Link>
+    );
 };
 
 Header = withRouter(Header);
