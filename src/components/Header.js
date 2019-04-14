@@ -11,28 +11,69 @@ import "./Header.css";
 
 const routes = [
     {
-        name: "About",
-        link: "/about"
+        name: "Adopt",
+        links: [
+            {
+                name: "Application",
+                link: "/application",
+                index: 0
+            },
+            {
+                name: "Adoptable Dogs",
+                link: "/adopt",
+                index: 1
+            }
+        ]
     },
     {
-        name: "Dance",
-        link: "/dance"
+        name: "Get Involved",
+        links: [
+            {
+                name: "Foster",
+                link: "/foster",
+                index: 2
+            },
+            {
+                name: "Volunteer",
+                link: "/volunteer",
+                index: 3
+            },
+            {
+                name: "Corporate Sponsorships",
+                link: "/corporate-sponsorships",
+                index: 4
+            }
+        ]
     },
     {
-        name: "Choreography",
-        link: "/choreography"
+        name: "About Us",
+        links: [
+            {
+                name: "Mission, etc.",
+                link: "/mission",
+                index: 5
+            },
+            {
+                name: "Our Story",
+                link: "/our-story",
+                index: 6
+            }
+        ]
     },
     {
-        name: "Gallery",
-        link: "/gallery"
-    },
-    {
-        name: "Philosophy",
-        link: "/philosophy"
-    },
-    {
-        name: "Contact",
-        link: "/contact"
+        name: "Contact Us",
+        links: [
+            {
+                name: "Contact",
+                link: "/contact",
+                index: 7
+            },
+            {
+                name: "Surrender",
+                link: "/surrender",
+                index: 8
+            }
+        ]
     }
 ];
 
@@ -64,23 +105,32 @@ class Header extends Component {
         if (!location) return index;
 
         switch (location.pathname) {
-            case "/about":
+            case "/application":
                 index = 0;
                 break;
-            case "/dance":
+            case "/adopt":
                 index = 1;
                 break;
-            case "/choreography":
+            case "/foster":
                 index = 2;
                 break;
-            case "/gallery":
+            case "/volunteer":
                 index = 3;
                 break;
-            case "/philosophy":
+            case "/corporate-sponsorships":
                 index = 4;
                 break;
-            case "/contact":
+            case "/mission":
                 index = 5;
+                break;
+            case "/our-story":
+                index = 6;
+                break;
+            case "/contact":
+                index = 7;
+                break;
+            case "/surrender":
+                index = 8;
                 break;
             default:
                 index = -1;
@@ -88,6 +138,31 @@ class Header extends Component {
         }
 
         return index;
+    };
+
+    mapSelectedIndex = index => {
+        const { selectedIndex } = this.state;
+
+        switch (selectedIndex) {
+            case 0:
+            case 1:
+                if (index === 0) return "selected";
+                break;
+            case 2:
+            case 3:
+            case 4:
+                if (index === 1) return "selected";
+                break;
+            case 5:
+            case 6:
+                if (index === 2) return "selected";
+                break;
+            case 7:
+            case 8:
+                if (index === 3) return "selected";
+                break;
+        }
+        return "";
     };
 
     handleClick = event => {
@@ -99,22 +174,20 @@ class Header extends Component {
     };
 
     makeDesktopMenu() {
-        const { selectedIndex } = this.state;
-
         return (
             <div className="desktop-menu">
                 {routes.map((route, index) => {
-                    let selected = "";
-                    if (selectedIndex === index) {
-                        selected = "selected";
-                    }
+                    let selected = this.mapSelectedIndex(index);
 
                     return (
-                        <Link to={route.link} key={route.name}>
+                        <div key={route.name}>
                             <div className={selected}>
                                 <b>{route.name}</b>
                             </div>
-                        </Link>
+                            <ul className="submenu">
+                                <li>Hey</li>
+                            </ul>
+                        </div>
                     );
                 })}
                 <div>
@@ -165,6 +238,10 @@ class Header extends Component {
         );
     }
 }
+
+const DesktopMenuItem = ({}) => {
+    return <div />;
+};
 
 Header = withRouter(Header);
 

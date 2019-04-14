@@ -24,6 +24,14 @@
     padding-bottom: 180px;
 }
 
+.background-blue {
+    background-color: var(--primary-blue);
+}
+
+.background-red {
+    background-color: var(--primary-red);
+}
+
 .poop {
     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMTZweCIgdmlld…04MCAyMS0xNjAgNDItMzIwIDQyLTMyMCAwLTMyMC04NC02NDAtODR6Ii8+PC9nPjwvc3ZnPg==);
     background-size: 100% 116px;

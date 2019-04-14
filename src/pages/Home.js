@@ -28,10 +28,10 @@ class Home extends React.Component {
                     <Swirl fill="#f7f7f7" />
                 </div>
                 <div className="frame-container">
-                    <Swirl fill="#2884f6" />
+                    <Swirl fill="#ff4949" />
                     <Cards />
                 </div>
-                <div className="first-frame-container home-first-frame">
+                <div className="frame-contianer background-red">
                     <Swirl fill="#f7f7f7" />
                 </div>
             </div>
@@ -68,32 +68,5 @@ const Cards = () => {
 };
 
 const GoToDance = props => <Link to="/dance" {...props} />;
-
-const images = [
-    {
-        label: `Headshot_1`,
-        imgPath: "/images/Lily/Headshot_1.jpg"
-    },
-    {
-        label: `Bodyshot_1`,
-        imgPath: "/images/Lily/Bodyshot_1.jpg"
-    },
-    {
-        label: `Danceshot_1`,
-        imgPath: "/images/Lily/Danceshot_1.jpg"
-    },
-    {
-        label: `Headshot_2`,
-        imgPath: "/images/Lily/Headshot_2.jpg"
-    },
-    {
-        label: `Bodyshot_2`,
-        imgPath: "/images/Lily/Bodyshot_2.jpg"
-    },
-    {
-        label: `Danceshot_2`,
-        imgPath: "/images/Lily/Danceshot_2.jpg"
-    }
-];
 
 export default Home;

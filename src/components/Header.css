@@ -36,15 +36,20 @@ a {
     padding: 10px 15px;
 }
 
-.desktop-menu > a:hover {
-    background-color: var(--background-color);
-    color: var(--text-black);
-    border-radius: 5px;
+.submenu {
+    position: absolute;
+    display: none;
 }
-.desktop-menu > a > div.selected {
+
+.desktop-menu > div:hover {
+}
+.desktop-menu > div:hover > ul {
+    display: block;
+}
+.desktop-menu > div > div.selected {
     color: var(--text-black);
 }
-.desktop-menu > a:hover > div.selected {
+.desktop-menu > div:hover > div.selected {
     color: var(--text-black);
 }
 .mobile-menu {
