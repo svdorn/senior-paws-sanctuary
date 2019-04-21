@@ -53,6 +53,7 @@ a {
 }
 .submenu > li {
     padding: 5px;
+    text-align: left;
 }
 
 .triangle {
@@ -100,7 +101,6 @@ a {
 .desktop-menu-item {
     font-size: 18px;
     margin-left: 5px;
-    margin-top: -8px;
 }
 .mobile-menu {
     float: right;
@@ -113,12 +113,12 @@ a {
     height: 42px;
 }
 
-@media only screen and (min-width: 1221px) {
+@media only screen and (min-width: 901px) {
     .mobile-menu {
         display: none;
     }
 }
-@media only screen and (max-width: 1220px) {
+@media only screen and (max-width: 900px) {
     .desktop-menu {
         display: none;
     }
