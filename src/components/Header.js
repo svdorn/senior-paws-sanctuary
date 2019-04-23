@@ -259,7 +259,7 @@ class Header extends Component {
             <div className="menu">
                 <div>
                     <Link to="/">
-                        <img src="/images/stuff/pawprint.svg" height={40} />
+                        <img src="/images/stuff/PawprintWhite.png" height={40} />
                     </Link>
                 </div>
                 {this.makeDesktopMenu()}

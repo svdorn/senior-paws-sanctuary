@@ -102,6 +102,7 @@
     flex-wrap: wrap;
     padding-top: 20px;
     padding-bottom: 160px;
+    justify-content: center;
 }
 .link-cards > a {
     margin: auto 20px;

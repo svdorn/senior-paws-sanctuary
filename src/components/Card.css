@@ -1,7 +1,7 @@
 .card {
     max-width: 296px;
     cursor: pointer;
-    margin: auto;
+    margin: 20px auto;
 }
 
 .card:hover {
@@ -20,4 +20,10 @@
 }
 .title {
     padding-bottom: 0px !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .title {
+        padding-bottom: 18px !important;
+    }
 }
