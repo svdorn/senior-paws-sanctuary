@@ -26,7 +26,9 @@ class Home extends React.Component {
             <div className="container">
                 <div className="first-frame-container home-first-frame">
                     <Swirl fill="#edf7fc" />
-                    <div className="header-name">Senior Paws Sanctuary</div>
+                    <div className="header-name">
+                        <b>Senior Paws Sanctuary</b>
+                    </div>
                     <div className="header-text">
                         Help us give senior dogs a comfortable home to live out their days in peace.
                     </div>
