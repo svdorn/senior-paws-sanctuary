@@ -32,6 +32,10 @@
     background-color: var(--primary-red);
 }
 
+.background-yellow {
+    background-color: var(--primary-yellow);
+}
+
 .poop {
     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMTZweCIgdmlld…04MCAyMS0xNjAgNDItMzIwIDQyLTMyMCAwLTMyMC04NC02NDAtODR6Ii8+PC9nPjwvc3ZnPg==);
     background-size: 100% 116px;
@@ -89,9 +93,22 @@
 .cards {
     display: inline-flex;
 }
-
 .cards > a {
     margin: auto 20px;
+}
+
+.link-cards {
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 160px;
+}
+.link-cards > a {
+    margin: auto 20px;
+}
+.link-cards-header {
+    font-size: 44px;
+    color: var(--text-white);
 }
 
 .intro {

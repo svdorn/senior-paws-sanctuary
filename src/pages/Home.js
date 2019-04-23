@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 import Card from "../components/Card";
+import LinkCard from "../components/LinkCard";
 import Swirl from "../components/Swirl";
 
 import "./Pages.css";
@@ -38,7 +39,9 @@ class Home extends React.Component {
                     <Swirl fill="#ffe289" />
                     <Cards />
                 </div>
-                <div className="frame-contianer background-red">
+                <div className="frame-contianer background-yellow">
+                    <div className="link-cards-header">Get Involved!</div>
+                    <LinkCards />
                     <Swirl fill="#edf7fc" />
                 </div>
             </div>
@@ -55,6 +58,15 @@ const DonateButton = () => (
 );
 
 const GoToDonate = props => <Link to="/donate" {...props} />;
+
+const LinkCards = () => (
+    <div className="link-cards">
+        <LinkCard img="/images/Dogs/Dog1.jpg" title="Adopt" link="/adopt" />
+        <LinkCard img="/images/Dogs/Dog2.jpg" title="Foster" link="/foster" />
+        <LinkCard img="/images/Dogs/Malinois.jpg" title="Volunteer" link="/volunteer" />
+        <LinkCard img="/images/Dogs/Pug.jpg" title="Donate" link="/donate" />
+    </div>
+);
 
 const Cards = () => {
     return (
@@ -83,7 +95,5 @@ const Cards = () => {
         </div>
     );
 };
-
-const GoToDance = props => <Link to="/dance" {...props} />;
 
 export default Home;

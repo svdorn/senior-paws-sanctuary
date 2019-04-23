@@ -14,3 +14,10 @@
     height: 150px;
     margin: 10px auto 0 auto;
 }
+.media-link-card {
+    height: 150px;
+    margin: auto;
+}
+.title {
+    padding-bottom: 0px !important;
+}
