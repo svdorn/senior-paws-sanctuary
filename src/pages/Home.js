@@ -25,19 +25,34 @@ class Home extends React.Component {
         return (
             <div className="container">
                 <div className="first-frame-container home-first-frame">
-                    <Swirl fill="#f7f7f7" />
+                    <Swirl fill="#edf7fc" />
+                    <div className="header-name">Senior Paws Sanctuary</div>
+                    <div className="header-text">
+                        Help us give senior dogs a comfortable home to live out their days in peace.
+                    </div>
+                    <DonateButton />
                 </div>
                 <div className="frame-container">
-                    <Swirl fill="#ff4949" />
+                    <Swirl fill="#ffe289" />
                     <Cards />
                 </div>
                 <div className="frame-contianer background-red">
-                    <Swirl fill="#f7f7f7" />
+                    <Swirl fill="#edf7fc" />
                 </div>
             </div>
         );
     }
 }
+
+const DonateButton = () => (
+    <div className="button-container">
+        <Button component={GoToDonate} className="donate-button" size="large">
+            Donate
+        </Button>
+    </div>
+);
+
+const GoToDonate = props => <Link to="/donate" {...props} />;
 
 const Cards = () => {
     return (

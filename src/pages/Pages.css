@@ -42,8 +42,24 @@
 }
 
 .home-first-frame {
-    height: 800px;
-    background-color: var(--primary-blue);
+    height: 600px;
+    background-image: url("/images/Dogs/Dog2.jpg");
+}
+.header-name {
+    color: var(--background-color);
+    font-size: 50px;
+    padding-top: 120px;
+}
+.header-text {
+    color: var(--background-color);
+    font-size: 20px;
+    padding-top: 20px;
+}
+.donate-button {
+    font-size: 24px !important;
+    padding: 12px 36px !important;
+    background-color: var(--primary-yellow) !important;
+    color: var(--text-black) !important;
 }
 
 .about-first-frame {

@@ -9,41 +9,26 @@ import Dance from "./pages/Dance";
 import Gallery from "./pages/Gallery";
 import Home from "./pages/Home";
 import Philosophy from "./pages/Philosophy";
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
 import ScrollToTop from "react-router-scroll-top";
 
 import "./App.css";
 
-const typography = { fontFamily: '"Muli", sans-serif', useNextVariants: true };
-const palette = {
-    primary: {
-        main: "#535453"
-    },
-    secondary: {
-        main: "#000000"
-    }
-};
-
-const theme = createMuiTheme({ palette, typography });
-
 const App = () => (
     <Router>
         <ScrollToTop>
-            <MuiThemeProvider theme={theme}>
-                <Header />
+            <Header />
 
-                <div className="App">
-                    <Route path="/" exact component={Home} />
-                    <Route path="/about" component={About} />
-                    <Route path="/contact" component={Contact} />
-                    <Route path="/choreography" component={Choreography} />
-                    <Route path="/dance" component={Dance} />
-                    <Route path="/gallery" component={Gallery} />
-                    <Route path="/philosophy" component={Philosophy} />
-                </div>
+            <div className="App">
+                <Route path="/" exact component={Home} />
+                <Route path="/about" component={About} />
+                <Route path="/contact" component={Contact} />
+                <Route path="/choreography" component={Choreography} />
+                <Route path="/dance" component={Dance} />
+                <Route path="/gallery" component={Gallery} />
+                <Route path="/philosophy" component={Philosophy} />
+            </div>
 
-                <Footer />
-            </MuiThemeProvider>
+            <Footer />
         </ScrollToTop>
     </Router>
 );
