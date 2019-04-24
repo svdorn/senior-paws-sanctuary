@@ -27,10 +27,15 @@ class Home extends React.Component {
                     <Swirl fill="#ffe289" />
                     <About />
                 </div>
-                <div className="frame-contianer background-yellow">
-                    <div className="link-cards-header">Get Involved!</div>
-                    <LinkCards />
+                <div className="frame-container background-yellow">
                     <Swirl fill="#edf7fc" />
+                    <div>
+                        <div className="link-cards-header">Get Involved!</div>
+                        <LinkCards />
+                    </div>
+                </div>
+                <div className="last-frame">
+                    <Donate />
                 </div>
             </div>
         );
@@ -47,6 +52,21 @@ const DonateButton = () => (
 
 const GoToDonate = props => <Link to="/donate" {...props} />;
 
+const Donate = () => (
+    <div className="home-about">
+        <div>
+            Help us Take Care of Senior Dogs!
+            <br />
+            <img src={"/images/stuff/dog2.svg"} alt="Dog" height={70} />
+        </div>
+        <div>
+            Your donation will help us take care of many Senior Dogs in need. To provide a
+            comfortable, loving and safe environment for seniors to live out their last years in a
+            suitable adoption home or a permanent foster donate below.
+        </div>
+        <DonateButton />
+    </div>
+);
 const About = () => (
     <div className="home-about">
         <div>

@@ -23,6 +23,10 @@
     width: 100%;
     padding-bottom: 180px;
 }
+.last-frame {
+    padding-bottom: 60px;
+    position: relative;
+}
 
 .background-blue {
     background-color: var(--primary-blue);
@@ -72,12 +76,13 @@
     font-size: 18px;
     line-height: 1.8em;
 }
+.home-donate {
+}
 
 .link-cards {
     display: inline-flex;
     flex-wrap: wrap;
     padding-top: 20px;
-    padding-bottom: 160px;
     justify-content: center;
 }
 .link-cards > a {
