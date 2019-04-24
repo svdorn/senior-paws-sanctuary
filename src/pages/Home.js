@@ -37,7 +37,7 @@ class Home extends React.Component {
                 </div>
                 <div className="frame-container">
                     <Swirl fill="#ffe289" />
-                    <Cards />
+                    <About />
                 </div>
                 <div className="frame-contianer background-yellow">
                     <div className="link-cards-header">Get Involved!</div>
@@ -58,6 +58,20 @@ const DonateButton = () => (
 );
 
 const GoToDonate = props => <Link to="/donate" {...props} />;
+
+const About = () => (
+    <div className="home-about">
+        <div>
+            Welcome to Senior Paws Sanctuary!
+            <br />
+            <img src={"/images/stuff/dog.svg"} height={70} />
+        </div>
+        <div>
+            Senior Paws Sanctuary, located in Madison Wisconsin, is a senior dog rescue. We provide
+            loving homes to senior dogs to live out their days comfortably.
+        </div>
+    </div>
+);
 
 const LinkCards = () => (
     <div className="link-cards">
