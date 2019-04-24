@@ -26,7 +26,7 @@ const routes = [
                 icon: "/images/stuff/pawprint.svg"
             }
         ],
-        triangleMargin: "-70px"
+        triangleMargin: "-100px"
     },
     {
         name: "Get Involved",
@@ -50,7 +50,7 @@ const routes = [
                 icon: "/images/stuff/pawprint.svg"
             }
         ],
-        triangleMargin: "-75px"
+        triangleMargin: "-110px"
     },
     {
         name: "About Us",
@@ -68,7 +68,7 @@ const routes = [
                 icon: "/images/stuff/pawprint.svg"
             }
         ],
-        triangleMargin: "-50px"
+        triangleMargin: "-70px"
     },
     {
         name: "Contact Us",
@@ -86,7 +86,7 @@ const routes = [
                 icon: "/images/stuff/pawprint.svg"
             }
         ],
-        triangleMargin: "-30px"
+        triangleMargin: "-60px"
     }
 ];
 
