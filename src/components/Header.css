@@ -54,6 +54,10 @@ a {
 .submenu > li {
     padding: 5px;
     text-align: left;
+    border-radius: 15px;
+}
+.submenu > li:hover {
+    background-color: var(--primary-blue);
 }
 
 .triangle {
@@ -100,7 +104,16 @@ a {
 }
 .desktop-menu-item {
     font-size: 18px;
-    margin-left: 5px;
+    margin-left: 8px;
+}
+.desktop-menu-item-container {
+    padding: 2px;
+}
+.desktop-menu-item-container > img {
+    vertical-align: middle;
+}
+.desktop-menu-item-container > span {
+    vertical-align: middle;
 }
 .mobile-menu {
     float: right;

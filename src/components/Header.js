@@ -271,7 +271,7 @@ class Header extends Component {
 
 const DesktopMenuItem = ({ name, link, index, icon }) => {
     return (
-        <Link to={link}>
+        <Link to={link} className="desktop-menu-item-container">
             <img height={20} src={icon} />
             <span className="desktop-menu-item">
                 <b>{name}</b>
