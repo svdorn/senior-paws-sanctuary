@@ -90,6 +90,56 @@ const routes = [
     }
 ];
 
+const mobileRoutes = [
+    {
+        name: "Application",
+        link: "/application",
+        index: 0
+    },
+    {
+        name: "Adoptable Dogs",
+        link: "/adopt",
+        index: 1
+    },
+
+    {
+        name: "Foster",
+        link: "/foster",
+        index: 2
+    },
+    {
+        name: "Volunteer",
+        link: "/volunteer",
+        index: 3
+    },
+    {
+        name: "Corporate Sponsorships",
+        link: "/corporate-sponsorships",
+        index: 4
+    },
+    {
+        name: "Mission, etc.",
+        link: "/mission",
+        index: 5
+    },
+    {
+        name: "Our Story",
+        link: "/our-story",
+        index: 6
+    },
+
+    {
+        name: "Contact",
+        link: "/contact",
+        index: 7
+    },
+    {
+        name: "Surrender",
+        link: "/surrender",
+        index: 8
+    }
+];
+
 class Header extends Component {
     constructor(props) {
         super(props);
@@ -241,7 +291,7 @@ class Header extends Component {
                     open={Boolean(this.state.open)}
                     onClose={this.handleClose}
                 >
-                    {routes.map((route, index) => (
+                    {mobileRoutes.map((route, index) => (
                         <Link to={route.link} key={route.name}>
                             <MenuItem
                                 selected={index === this.state.selectedIndex}
