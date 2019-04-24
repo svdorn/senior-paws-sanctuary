@@ -7,20 +7,39 @@ import "./Footer.css";
 
 const routes = [
     {
-        name: "About",
-        link: "/about"
+        name: "Application",
+        link: "/application"
     },
     {
-        name: "Dance",
-        link: "/dance"
+        name: "Adoptable Dogs",
+        link: "/adopt"
     },
     {
-        name: "Choreography",
-        link: "/choreography"
+        name: "Foster",
+        link: "/foster"
+    },
+    {
+        name: "Volunteer",
+        link: "/volunteer"
+    }
+];
+
+const routes2 = [
+    {
+        name: "Mission, etc.",
+        link: "/mission"
+    },
+    {
+        name: "Our Story",
+        link: "/our-story"
     },
     {
         name: "Contact",
         link: "/contact"
+    },
+    {
+        name: "Surrender",
+        link: "/surrender"
     }
 ];
 
@@ -41,6 +60,13 @@ class Footer extends Component {
                 </div>
                 <div className="footer-text">
                     {routes.map(route => (
+                        <div key={route.name}>
+                            <Link to={route.link}>{route.name}</Link>
+                        </div>
+                    ))}
+                </div>
+                <div className="footer-text">
+                    {routes2.map(route => (
                         <div key={route.name}>
                             <Link to={route.link}>{route.name}</Link>
                         </div>
