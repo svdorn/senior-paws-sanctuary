@@ -174,6 +174,8 @@ class Header extends Component {
             case 8:
                 if (index === 3) return "selected";
                 break;
+            default:
+                return "";
         }
         return "";
     };
@@ -259,7 +261,11 @@ class Header extends Component {
             <div className="menu">
                 <div>
                     <Link to="/">
-                        <img src="/images/stuff/PawprintWhite.png" height={40} />
+                        <img
+                            src="/images/stuff/PawprintWhite.png"
+                            alt="Senior Dogs Sanctuary"
+                            height={40}
+                        />
                     </Link>
                 </div>
                 {this.makeDesktopMenu()}
@@ -272,7 +278,7 @@ class Header extends Component {
 const DesktopMenuItem = ({ name, link, index, icon }) => {
     return (
         <Link to={link} className="desktop-menu-item-container">
-            <img height={20} src={icon} />
+            <img height={20} src={icon} alt="Pawprint" />
             <span className="desktop-menu-item">
                 <b>{name}</b>
             </span>

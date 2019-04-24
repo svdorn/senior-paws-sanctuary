@@ -5,16 +5,21 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 
-import "./Card.css";
+import "./LinkCard.css";
 
 class LinkCard extends Component {
     render() {
-        const { content, img, link, title } = this.props;
+        const { img, link, title } = this.props;
 
         return (
             <Link to={link}>
                 <CardContainer className="card">
-                    <CardMedia className="media-link-card" image={img} style={{ width: "200px" }} />
+                    <CardMedia
+                        className="media-link-card"
+                        image={img}
+                        alt="Dog"
+                        style={{ width: "200px" }}
+                    />
                     <CardContent className="title">
                         <Typography gutterBottom variant="h5" component="h3">
                             {title}

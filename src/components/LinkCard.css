@@ -1,0 +1,29 @@
+.card {
+    max-width: 296px;
+    cursor: pointer;
+    margin: 20px auto;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 6px 3px #676767;
+    -moz-box-shadow: 0px 0px 6px 3px #676767;
+    -webkit-box-shadow: 0px 0px 6px 3px #676767;
+}
+
+.media {
+    height: 150px;
+    margin: 10px auto 0 auto;
+}
+.media-link-card {
+    height: 150px;
+    margin: auto;
+}
+.title {
+    padding-bottom: 0px !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .title {
+        padding-bottom: 18px !important;
+    }
+}
