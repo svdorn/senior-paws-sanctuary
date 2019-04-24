@@ -68,6 +68,7 @@
 }
 .home-about > div:nth-child(2) {
     max-width: 500px;
+    margin: auto;
     font-size: 18px;
     line-height: 1.8em;
 }
