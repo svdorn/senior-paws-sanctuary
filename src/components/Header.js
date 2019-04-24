@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import IconButton from "@material-ui/core/IconButton";
@@ -137,6 +138,11 @@ const mobileRoutes = [
         name: "Surrender",
         link: "/surrender",
         index: 8
+    },
+    {
+        name: "Donate",
+        link: "/donate",
+        index: 9
     }
 ];
 
@@ -273,7 +279,7 @@ class Header extends Component {
                     );
                 })}
                 <div>
-                    <SocialLinks />
+                    <DonateButton />
                 </div>
             </div>
         );
@@ -324,6 +330,16 @@ class Header extends Component {
         );
     }
 }
+
+const DonateButton = () => (
+    <div>
+        <Button component={GoToDonate} className="header-button" size="small">
+            Donate
+        </Button>
+    </div>
+);
+
+const GoToDonate = props => <Link to="/donate" {...props} />;
 
 const DesktopMenuItem = ({ name, link, index, icon }) => {
     return (

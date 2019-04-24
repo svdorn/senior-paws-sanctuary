@@ -126,6 +126,13 @@ a {
     height: 42px;
 }
 
+.header-button {
+    font-size: 16px !important;
+    padding: 8px 12px !important;
+    background-color: var(--primary-yellow) !important;
+    color: var(--text-white) !important;
+}
+
 @media only screen and (min-width: 901px) {
     .mobile-menu {
         display: none;

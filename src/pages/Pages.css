@@ -42,6 +42,7 @@
 .home-header {
     max-width: 92%;
     margin: auto;
+    text-align: left;
 }
 .header-name {
     color: var(--background-color);
