@@ -17,13 +17,13 @@ const routes = [
                 name: "Application",
                 link: "/application",
                 index: 0,
-                icon: "/images/stuff/pawprint.svg"
+                icon: "/images/Icons/pawprint.svg"
             },
             {
                 name: "Adoptable Dogs",
                 link: "/adopt",
                 index: 1,
-                icon: "/images/stuff/pawprint.svg"
+                icon: "/images/Icons/pawprint.svg"
             }
         ],
         triangleMargin: "-100px"
@@ -35,19 +35,19 @@ const routes = [
                 name: "Foster",
                 link: "/foster",
                 index: 2,
-                icon: "/images/stuff/pawprint.svg"
+                icon: "/images/Icons/pawprint.svg"
             },
             {
                 name: "Volunteer",
                 link: "/volunteer",
                 index: 3,
-                icon: "/images/stuff/pawprint.svg"
+                icon: "/images/Icons/pawprint.svg"
             },
             {
                 name: "Corporate Sponsorships",
                 link: "/corporate-sponsorships",
                 index: 4,
-                icon: "/images/stuff/pawprint.svg"
+                icon: "/images/Icons/pawprint.svg"
             }
         ],
         triangleMargin: "-110px"
@@ -59,13 +59,13 @@ const routes = [
                 name: "Mission, etc.",
                 link: "/mission",
                 index: 5,
-                icon: "/images/stuff/pawprint.svg"
+                icon: "/images/Icons/pawprint.svg"
             },
             {
                 name: "Our Story",
                 link: "/our-story",
                 index: 6,
-                icon: "/images/stuff/pawprint.svg"
+                icon: "/images/Icons/pawprint.svg"
             }
         ],
         triangleMargin: "-70px"
@@ -77,13 +77,13 @@ const routes = [
                 name: "Contact",
                 link: "/contact",
                 index: 7,
-                icon: "/images/stuff/pawprint.svg"
+                icon: "/images/Icons/pawprint.svg"
             },
             {
                 name: "Surrender",
                 link: "/surrender",
                 index: 8,
-                icon: "/images/stuff/pawprint.svg"
+                icon: "/images/Icons/pawprint.svg"
             }
         ],
         triangleMargin: "-60px"
@@ -312,7 +312,7 @@ class Header extends Component {
                 <div>
                     <Link to="/">
                         <img
-                            src="/images/stuff/PawprintWhite.png"
+                            src="/images/Icons/PawprintWhite.png"
                             alt="Senior Dogs Sanctuary"
                             height={40}
                         />

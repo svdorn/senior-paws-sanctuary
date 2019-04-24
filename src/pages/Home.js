@@ -57,7 +57,7 @@ const Donate = () => (
         <div>
             Help us Take Care of Senior Dogs!
             <br />
-            <img src={"/images/stuff/dog2.svg"} alt="Dog" height={70} />
+            <img src={"/images/Icons/dog2.svg"} alt="Dog" height={70} />
         </div>
         <div>
             Your donation will help us take care of many Senior Dogs in need. To provide a
@@ -72,7 +72,7 @@ const About = () => (
         <div>
             Welcome to Senior Paws Sanctuary!
             <br />
-            <img src={"/images/stuff/dog.svg"} alt="Dog" height={70} />
+            <img src={"/images/Icons/dog.svg"} alt="Dog" height={70} />
         </div>
         <div>
             Senior Paws Sanctuary, located in Madison Wisconsin, is a senior dog rescue. We provide
