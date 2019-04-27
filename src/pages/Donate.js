@@ -12,11 +12,25 @@ class Donate extends React.Component {
                     <Swirl fill="#edf7fc" />
                     Donate
                     <DonateButton />
+                    <SubscribeButton />
                 </div>
             </div>
         );
     }
 }
+
+const SubscribeButton = () => (
+    <div className="button-container">
+        <Button
+            target="_blank"
+            href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Z989F9DMQU74N&currency_code=USD&source=url"
+            className="donate-button"
+            size="large"
+        >
+            Subscribe
+        </Button>
+    </div>
+);
 
 const DonateButton = () => (
     <div className="button-container">

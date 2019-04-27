@@ -39,6 +39,10 @@
     height: 600px;
     background-image: url("/images/Dogs/Dog2.jpg");
 }
+.first-frame-header {
+    color: var(--text-white);
+    height: 170px;
+}
 .home-header {
     max-width: 92%;
     margin: auto;
@@ -103,28 +107,13 @@
     margin-left: -1007px;
 }
 
-.contact-form {
-    display: inline-flex;
-    flex-wrap: wrap-reverse;
-}
 .contact-header {
     padding-bottom: 25px;
     font-size: 22px;
 }
 
-.contact-form > div > img {
-    height: 400px;
-    /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-    -webkit-border-radius: 20px;
-    /* Firefox 1-3.6 */
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-}
-
-.contact-form > div {
+.contact-form {
     margin: auto;
-    padding-left: 60px;
-    padding-right: 60px;
 }
 
 .text-field {
@@ -139,7 +128,7 @@
     margin: 20px auto;
 }
 .form-button {
-    background-color: var(--primary-color) !important;
+    background-color: var(--primary-yellow) !important;
     color: var(--text-white) !important;
 }
 
