@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
-import SocialLinks from "../components/SocialLinks";
 import Swirl from "../components/Swirl";
 import TextField from "@material-ui/core/TextField";
 
@@ -32,7 +31,11 @@ class Contact extends React.Component {
                     <Swirl fill="#edf7fc" />
                 </div>
                 <div className="contact-form">
-                    <form action="https://dislack.com/send/5cba2caf7e1a631b44de68d8" method="post">
+                    <form
+                        action="https://dislack.com/send/5cba2caf7e1a631b44de68d8"
+                        method="post"
+                        id="form-contact"
+                    >
                         <TextField
                             id="outlined-with-placeholder"
                             className="text-field"
