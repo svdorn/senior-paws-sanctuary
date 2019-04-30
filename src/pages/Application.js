@@ -11,10 +11,14 @@ import "./Pages.css";
 class Application extends React.Component {
     state = {
         activeStep: 0,
-        name: "",
+        firstName: "",
+        lastName: "",
         email: "",
-        subject: "",
-        message: ""
+        phoneNumber: "",
+        streetAddress: "",
+        city: "",
+        state: "",
+        zipCode: ""
     };
 
     handleNext = () => {
@@ -34,15 +38,35 @@ class Application extends React.Component {
         });
     };
 
+    handleChange = name => event => {
+        this.setState({
+            [name]: event.target.value
+        });
+    };
+
     getStepContent = stepIndex => {
+        const {
+            firstName,
+            lastName,
+            email,
+            phoneNumber,
+            streetAddress,
+            city,
+            state,
+            zipCode
+        } = this.state;
         switch (stepIndex) {
             case 0:
                 return (
                     <PersonalInformation
-                        name={this.state.name}
-                        email={this.state.email}
-                        subject={this.state.subject}
-                        message={this.state.message}
+                        firstName={firstName}
+                        lastName={lastName}
+                        email={email}
+                        phoneNumber={phoneNumber}
+                        streetAddress={streetAddress}
+                        city={city}
+                        state={state}
+                        zipCode={zipCode}
                         handleChange={this.handleChange}
                     />
                 );
@@ -57,6 +81,8 @@ class Application extends React.Component {
 
     render() {
         const { activeStep } = this.state;
+
+        console.log("phone number: ", this.state.phoneNumber);
         return (
             <div className="container">
                 <div className="first-frame-container first-frame-header background-yellow">
@@ -87,7 +113,7 @@ class Application extends React.Component {
                         ) : (
                             <div>
                                 {this.getStepContent(activeStep)}
-                                <div styleName="application-buttons">
+                                <div className="application-buttons">
                                     <Button disabled={activeStep === 0} onClick={this.handleBack}>
                                         Back
                                     </Button>
@@ -111,58 +137,105 @@ class Application extends React.Component {
 
 const steps = ["Personal Information", "Questionnaire", "Pet Selection"];
 
-const PersonalInformation = ({ name, email, subject, message, handleChange }) => {
+const PersonalInformation = ({
+    firstName,
+    lastName,
+    email,
+    phoneNumber,
+    streetAddress,
+    city,
+    state,
+    zipCode,
+    handleChange
+}) => {
     return (
-        <div className="application-form">
-            <form
-                action="https://dislack.com/send/5cba2caf7e1a631b44de68d8"
-                method="post"
-                id="form-contact"
-            >
-                <TextField
-                    id="outlined-with-placeholder"
-                    className="text-field"
-                    label="Name"
-                    variant="outlined"
-                    type="text"
-                    name="name"
-                    value={name}
-                    onChange={() => handleChange("name")}
-                />
-                <TextField
-                    id="outlined-with-placeholder"
-                    className="text-field"
-                    label="Email"
-                    type="email"
-                    name="email"
-                    variant="outlined"
-                    value={email}
-                    onChange={() => handleChange("email")}
-                />
-                <TextField
-                    id="outlined-with-placeholder"
-                    className="text-field"
-                    label="Subject"
-                    type="text"
-                    name="subject"
-                    variant="outlined"
-                    value={subject}
-                    onChange={() => handleChange("subject")}
-                />
-                <TextField
-                    id="outlined-with-placeholder"
-                    className="text-field-multiline"
-                    rows="4"
-                    label="Message"
-                    type="text"
-                    name="message"
-                    variant="outlined"
-                    multiline
-                    value={message}
-                    onChange={() => handleChange("message")}
-                />
-            </form>
-        </div>
+        <form
+            action="https://dislack.com/send/5cba2caf7e1a631b44de68d8"
+            method="post"
+            id="form-contact"
+            className="application-form"
+        >
+            <TextField
+                id="outlined-with-placeholder"
+                className="text-field"
+                label="First Name"
+                variant="outlined"
+                type="text"
+                name="firstName"
+                value={firstName}
+                onChange={handleChange("firstName")}
+            />
+            <TextField
+                id="outlined-with-placeholder"
+                className="text-field"
+                label="Last Name"
+                variant="outlined"
+                type="text"
+                name="lastName"
+                value={lastName}
+                onChange={handleChange("lastName")}
+            />
+            <TextField
+                id="outlined-with-placeholder"
+                className="text-field"
+                label="Email"
+                type="email"
+                name="email"
+                variant="outlined"
+                value={email}
+                onChange={handleChange("email")}
+            />
+            <TextField
+                id="outlined-with-placeholder"
+                className="text-field"
+                label="Phone Number"
+                variant="outlined"
+                type="text"
+                name="phoneNumber"
+                value={phoneNumber}
+                onChange={handleChange("phoneNumber")}
+            />
+            <TextField
+                id="outlined-with-placeholder"
+                className="text-field"
+                label="Street Address"
+                variant="outlined"
+                type="text"
+                name="streetAddress"
+                value={streetAddress}
+                onChange={handleChange("streetAddress")}
+            />
+            <TextField
+                id="outlined-with-placeholder"
+                className="text-field"
+                label="City"
+                variant="outlined"
+                type="text"
+                name="city"
+                value={city}
+                onChange={handleChange("city")}
+            />
+            <TextField
+                id="outlined-with-placeholder"
+                className="text-field"
+                label="State"
+                variant="outlined"
+                type="text"
+                name="state"
+                value={state}
+                onChange={handleChange("state")}
+            />
+            <TextField
+                id="outlined-with-placeholder"
+                className="text-field"
+                label="Zip Code"
+                variant="outlined"
+                type="text"
+                name="zipCode"
+                value={zipCode}
+                onChange={handleChange("zipCode")}
+            />
+        </form>
     );
 };
 
