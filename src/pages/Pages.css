@@ -128,9 +128,14 @@
 }
 
 .application-questionnaire {
-    margin: auto 0 30px 0;
+    margin: 30px auto;
     max-width: 700px;
     width: 92%;
+    text-align: center;
+}
+
+.application-radio-group {
+    margin-top: 20px !important;
 }
 
 .text-field {

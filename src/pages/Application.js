@@ -259,7 +259,7 @@ const Questionnaire = ({ house, pets, handleChange }) => {
                 </RadioGroup>
             </FormControl>
             <br />
-            <FormControl component="fieldset">
+            <FormControl component="fieldset" className="application-radio-group">
                 <FormLabel component="legend">Do you have pets?</FormLabel>
                 <RadioGroup
                     aria-label="Pets"
