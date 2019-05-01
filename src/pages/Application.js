@@ -4,8 +4,6 @@ import Stepper from "@material-ui/core/Stepper";
 import Step from "@material-ui/core/Step";
 import StepLabel from "@material-ui/core/StepLabel";
 import Swirl from "../components/Swirl";
-import FormControl from "@material-ui/core/FormControl";
-import Select from "@material-ui/core/Select";
 import TextField from "@material-ui/core/TextField";
 
 import "./Pages.css";
@@ -217,24 +215,16 @@ const PersonalInformation = ({
                 value={city}
                 onChange={handleChange("city")}
             />
-            <FormControl>
-                <InputLabel htmlFor="age-simple">State</InputLabel>
-                <Select
-                    value={state}
-                    onChange={handleChange("state")}
-                    inputProps={{
-                        name: "state",
-                        id: "state-simple"
-                    }}
-                >
-                    <MenuItem value="">
-                        <em>None</em>
-                    </MenuItem>
-                    {states.map(state => (
-                        <MenuItem value={state}>{state}</MenuItem>
-                    ))}
-                </Select>
-            </FormControl>
+            <TextField
+                id="outlined-with-placeholder"
+                className="text-field"
+                label="State"
+                variant="outlined"
+                type="text"
+                name="state"
+                value={state}
+                onChange={handleChange("state")}
+            />
             <TextField
                 id="outlined-with-placeholder"
                 className="text-field"
@@ -256,58 +246,5 @@ const Questionnaire = () => {
 const PetSelection = () => {
     return "here";
 };
-
-const states = [
-    "Alabama",
-    "Alaska",
-    "Arizona",
-    "Arkansas",
-    "California",
-    "Colorado",
-    "Connecticut",
-    "Delaware",
-    "Florida",
-    "Georgia",
-    "Hawaii",
-    "Idaho",
-    "Illinois",
-    "Indiana",
-    "Iowa",
-    "Kansas",
-    "Kentucky",
-    "Louisiana",
-    "Maine",
-    "Maryland",
-    "Massachusetts",
-    "Michigan",
-    "Minnesota",
-    "Mississippi",
-    "Missouri",
-    "Montana",
-    "Nebraska",
-    "Nevada",
-    "New Hampshire",
-    "New Jersey",
-    "New Mexico",
-    "New York",
-    "North Carolina",
-    "North Dakota",
-    "Ohio",
-    "Oklahoma",
-    "Oregon",
-    "Pennsylvania",
-    "Rhode Island",
-    "South Carolina",
-    "South Dakota",
-    "Tennessee",
-    "Texas",
-    "Utah",
-    "Vermont",
-    "Virginia",
-    "Washington",
-    "West Virginia",
-    "Wisconsin",
-    "Wyoming"
-];
 
 export default Application;
