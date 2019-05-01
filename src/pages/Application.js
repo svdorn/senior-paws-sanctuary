@@ -1,5 +1,10 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import FormControl from "@material-ui/core/FormControl";
+import FormLabel from "@material-ui/core/FormLabel";
+import Radio from "@material-ui/core/Radio";
+import RadioGroup from "@material-ui/core/RadioGroup";
 import Stepper from "@material-ui/core/Stepper";
 import Step from "@material-ui/core/Step";
 import StepLabel from "@material-ui/core/StepLabel";
@@ -18,7 +23,9 @@ class Application extends React.Component {
         streetAddress: "",
         city: "",
         state: "",
-        zipCode: ""
+        zipCode: "",
+        house: "",
+        pets: ""
     };
 
     handleNext = () => {
@@ -53,7 +60,9 @@ class Application extends React.Component {
             streetAddress,
             city,
             state,
-            zipCode
+            zipCode,
+            house,
+            pets
         } = this.state;
         switch (stepIndex) {
             case 0:
@@ -71,7 +80,7 @@ class Application extends React.Component {
                     />
                 );
             case 1:
-                return <Questionnaire />;
+                return <Questionnaire house={house} handleChange={this.handleChange} pets={pets} />;
             case 2:
                 return <PetSelection />;
             default:
@@ -149,12 +158,7 @@ const PersonalInformation = ({
     handleChange
 }) => {
     return (
-        <form
-            action="https://dislack.com/send/5cba2caf7e1a631b44de68d8"
-            method="post"
-            id="form-contact"
-            className="application-form"
-        >
+        <div className="application-form">
             <TextField
                 id="outlined-with-placeholder"
                 className="text-field"
@@ -235,12 +239,40 @@ const PersonalInformation = ({
                 value={zipCode}
                 onChange={handleChange("zipCode")}
             />
-        </form>
+        </div>
     );
 };
 
-const Questionnaire = () => {
-    return "Questionnaire";
+const Questionnaire = ({ house, pets, handleChange }) => {
+    return (
+        <div className="application-questionnaire">
+            <FormControl component="fieldset">
+                <FormLabel component="legend">Do you rent or own a house?</FormLabel>
+                <RadioGroup
+                    aria-label="House"
+                    name="house"
+                    value={house}
+                    onChange={handleChange("house")}
+                >
+                    <FormControlLabel value="rent" control={<Radio />} label="Rent" />
+                    <FormControlLabel value="own" control={<Radio />} label="Own" />
+                </RadioGroup>
+            </FormControl>
+            <br />
+            <FormControl component="fieldset">
+                <FormLabel component="legend">Do you have pets?</FormLabel>
+                <RadioGroup
+                    aria-label="Pets"
+                    name="pets"
+                    value={pets}
+                    onChange={handleChange("pets")}
+                >
+                    <FormControlLabel value="yes" control={<Radio />} label="Yes" />
+                    <FormControlLabel value="no" control={<Radio />} label="No" />
+                </RadioGroup>
+            </FormControl>
+        </div>
+    );
 };
 
 const PetSelection = () => {
