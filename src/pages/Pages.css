@@ -246,6 +246,18 @@
     margin-top: 20px;
 }
 
+.donate {
+    display: inline-flex;
+    flex-wrap: wrap;
+    max-width: 92%;
+    margin: auto;
+}
+.donate > div {
+    padding: 0 30px 30px 30px;
+    line-height: 1.8em;
+    max-width: 500px;
+}
+
 .button-container {
     margin-top: 25px;
 }
