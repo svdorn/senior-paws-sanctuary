@@ -56,7 +56,7 @@ const routes = [
         name: "About Us",
         links: [
             {
-                name: "Mission, etc.",
+                name: "Mission",
                 link: "/mission",
                 index: 5,
                 icon: "/images/Icons/pawprint.svg"
@@ -112,7 +112,7 @@ const mobileRoutes = [
         index: 4
     },
     {
-        name: "Mission, etc.",
+        name: "Mission",
         link: "/mission",
         index: 5
     },

@@ -202,6 +202,24 @@
     margin-top: 20px;
 }
 
+.mission {
+    margin: auto;
+    max-width: 700px;
+    width: 92%;
+    font-size: 18px;
+    line-height: 1.8em;
+}
+.mission-statement {
+    font-size: 22px;
+}
+.mission-values {
+    margin-top: 70px;
+}
+.mission-values > div {
+    margin-top: 20px;
+    text-align: left;
+}
+
 .text-field-multiline {
     width: 300px;
     max-width: 300px;

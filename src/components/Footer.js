@@ -30,7 +30,7 @@ const routes2 = [
         link: "/corporate-sponsorships"
     },
     {
-        name: "Mission, etc.",
+        name: "Mission",
         link: "/mission"
     },
     {
