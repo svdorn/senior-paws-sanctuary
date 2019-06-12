@@ -26,6 +26,10 @@ const routes = [
 
 const routes2 = [
     {
+        name: "Corporate Sponsorships",
+        link: "/corporate-sponsorships"
+    },
+    {
         name: "Mission, etc.",
         link: "/mission"
     },
@@ -36,10 +40,6 @@ const routes2 = [
     {
         name: "Contact",
         link: "/contact"
-    },
-    {
-        name: "Surrender",
-        link: "/surrender"
     }
 ];
 

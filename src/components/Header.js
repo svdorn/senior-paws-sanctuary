@@ -78,12 +78,6 @@ const routes = [
                 link: "/contact",
                 index: 7,
                 icon: "/images/Icons/pawprint.svg"
-            },
-            {
-                name: "Surrender",
-                link: "/surrender",
-                index: 8,
-                icon: "/images/Icons/pawprint.svg"
             }
         ],
         triangleMargin: "-60px"
@@ -134,14 +128,9 @@ const mobileRoutes = [
         index: 7
     },
     {
-        name: "Surrender",
-        link: "/surrender",
-        index: 8
-    },
-    {
         name: "Donate",
         link: "/donate",
-        index: 9
+        index: 8
     }
 ];
 
@@ -197,7 +186,7 @@ class Header extends Component {
             case "/contact":
                 index = 7;
                 break;
-            case "/surrender":
+            case "/donate":
                 index = 8;
                 break;
             default:
@@ -226,7 +215,6 @@ class Header extends Component {
                 if (index === 2) return "selected";
                 break;
             case 7:
-            case 8:
                 if (index === 3) return "selected";
                 break;
             default:

@@ -29,9 +29,13 @@ class Application extends React.Component {
     };
 
     handleNext = () => {
-        this.setState(state => ({
-            activeStep: state.activeStep + 1
-        }));
+        if (this.state.activeStep >= 2) {
+            this.handleSubmit();
+        } else {
+            this.setState(state => ({
+                activeStep: state.activeStep + 1
+            }));
+        }
     };
 
     handleBack = () => {
@@ -49,6 +53,10 @@ class Application extends React.Component {
         this.setState({
             [name]: event.target.value
         });
+    };
+
+    handleSubmit = () => {
+        document.getElementById("application-form").submit();
     };
 
     getStepContent = stepIndex => {
@@ -91,7 +99,6 @@ class Application extends React.Component {
     render() {
         const { activeStep } = this.state;
 
-        console.log("phone number: ", this.state.phoneNumber);
         return (
             <div className="container">
                 <div className="first-frame-container first-frame-header background-yellow">
@@ -158,7 +165,12 @@ const PersonalInformation = ({
     handleChange
 }) => {
     return (
-        <div className="application-form">
+        <form
+            action="https://dislack.com/send/5cba2caf7e1a631b44de68d8"
+            method="post"
+            className="application-form"
+            id="application-form"
+        >
             <TextField
                 id="outlined-with-placeholder"
                 className="text-field"
@@ -239,7 +251,7 @@ const PersonalInformation = ({
                 value={zipCode}
                 onChange={handleChange("zipCode")}
             />
-        </div>
+        </form>
     );
 };
 
@@ -276,7 +288,16 @@ const Questionnaire = ({ house, pets, handleChange }) => {
 };
 
 const PetSelection = () => {
-    return "here";
+    return (
+        <div>
+            <img src={"/images/Icons/dog2.svg"} alt="Dog" height={70} />
+            <br />
+            <div style={{ margin: "auto", maxWidth: "700px" }}>
+                We currently don't have any dogs avaliable for adoption. Please submit your
+                application and we will reach out to you when we have dogs available.
+            </div>
+        </div>
+    );
 };
 
 export default Application;
