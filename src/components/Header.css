@@ -138,8 +138,14 @@ a {
 .header-button {
     font-size: 16px !important;
     padding: 8px 12px !important;
+}
+.header-button.yellow {
     background-color: var(--primary-yellow) !important;
     color: var(--text-white) !important;
+}
+.header-button.black {
+    background-color: var(--primary-white) !important;
+    color: var(--primary-black) !important;
 }
 
 @media only screen and (min-width: 901px) {

@@ -232,6 +232,11 @@ class Header extends Component {
     };
 
     makeDesktopMenu() {
+        let donateButtonColor = "black";
+        if (this.state.selectedIndex === -1) {
+            donateButtonColor = "yellow";
+        }
+
         return (
             <div className="desktop-menu">
                 {routes.map((route, index) => {
@@ -266,7 +271,7 @@ class Header extends Component {
                     );
                 })}
                 <div>
-                    <DonateButton />
+                    <DonateButton color={donateButtonColor} />
                 </div>
             </div>
         );
@@ -318,9 +323,9 @@ class Header extends Component {
     }
 }
 
-const DonateButton = () => (
+const DonateButton = ({ color }) => (
     <div>
-        <Button component={GoToDonate} className="header-button" size="small">
+        <Button component={GoToDonate} className={"header-button " + color} size="small">
             Donate
         </Button>
     </div>
