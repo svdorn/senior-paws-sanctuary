@@ -316,6 +316,9 @@
     .link-cards-header {
         font-size: 40px;
     }
+    .our-story {
+        padding: 20px;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -324,5 +327,8 @@
     }
     .contact-header {
         font-size: 18px;
+    }
+    .our-story {
+        padding: 5px;
     }
 }
